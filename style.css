@@ -1,131 +1,128 @@
-/* ====== RESET ====== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background: #0f0f0f;
-    color: white;
-    overflow-x: hidden;
-}
-
-/* ====== ANIMOWANE TŁO ====== */
-.bg-animation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: radial-gradient(circle, #333 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.15;
-    animation: bgMove 20s linear infinite;
-    z-index: -1;
-}
-
-@keyframes bgMove {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(80px, 80px);
-    }
-}
-
-/* ====== HEADER ====== */
-header {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
     text-align: center;
-    padding: 40px 20px;
-    font-size: 42px;
-    font-weight: 700;
-    position: relative;
+}
+
+header {
+    padding: 30px 0;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
 .login-btn {
-    position: absolute;
-    right: 20px;
-    top: 30px;
-    padding: 10px 20px;
-    background: #222;
-    border-radius: 10px;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border: 1px solid #444;
-    transition: .3s;
+    background-color: #ff4c4c;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
 .login-btn:hover {
-    background: #333;
+    transform: scale(1.1);
 }
 
-/* ====== PANEL TWÓRCY ====== */
+/* Panel twórcy */
 .creator-panel {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #111;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
-    animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
 .creator-top {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .avatar {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    background: #444;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
 .creator-info h2 {
-    font-size: 32px;
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 26px;
 }
 
 .creator-info p {
-    color: #bbb;
-    max-width: 550px;
+    font-size: 16px;
 }
 
-/* ====== STATYSTYKI ====== */
+/* Statystyki */
 .stats {
     display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
 }
 
 .stat-box {
-    flex: 1;
-    background: #151515;
-    padding: 20px;
-    border-radius: 15px;
     text-align: center;
-    transition: .3s;
-    box-shadow: 0 0 15px rgba(255,255,255,0.03);
 }
 
-.stat-box:hover {
-    transfor
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Social media */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.social-btn {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-btn.discord:hover {
+    background-color: #7289da;
+    transform: scale(1.1);
+}
+
+.social-btn.youtube:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
+.social-btn.tiktok:hover {
+    background-color: #69c9d0;
+    transform: scale(1.1);
+}
+
+/* Embed sekcje */
+.embed-section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.embed-section iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 12px;
+}
